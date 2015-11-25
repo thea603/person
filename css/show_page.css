@@ -5,23 +5,27 @@
   font:14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
 }
 .show_page{
-  display: none;
+  overflow: hidden;
 	position: absolute;
-  /*background-image: url(../image/banner.jpg);*/
   background-repeat: no-repeat;
   background-size: cover;
 	background: black;
-	/*background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;*/
 	top:0;
 	bottom: 0;
 	left:0;
 	right:0;
-	-webkit-transition-property: top,bottom,left,right;
-	transition-property: top,bottom,left,right;
-	-webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
+}
+.show_page_animate{
+  animation: show 1s 1 linear forwards;
+}
+
+@keyframes show {
+  to{
+    top:50%;
+  bottom: 50%;
+  left:50%;
+  right:50%;
+  }
 }
 @font-face {
   	font-family: 'Pacifico';
@@ -34,13 +38,16 @@
 	height: 25%;
 	margin: 0 auto;
 	margin-top: 15%;
-	/*animation: title 6s 1 linear;*/
+  z-index: 99;
+  position: relative;
+	animation: title 6s 1 linear;
 }
 /*标题内容*/
 .show_page .title p{
   	text-align: center;
   	font-size: 6em;
   	font-family: Pacifico;
+  
     color: #FFFFFF;
 }
 
@@ -100,26 +107,25 @@
 	width: 100%;
 }
 .geometry{
+  width: 100%;
+  height:100%;
   position: absolute;
-  /*border:1px solid red;*/
   top:0;
   margin: 0 auto;
 }
 .bg_1{
-  width: 20%;
-  height: 20%;
-  margin-top: 10%;
-  background-size: cover;
-  transform:rotate(7deg);
-  background: url(../image/1.png) no-repeat;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top:10%;
+  left: -10%;
 }
 .bg_2{
-  width: 20%;
-  height: 20%;
-  margin-top: 10%;
-  background-size: cover;
-  transform:rotate(7deg);
-  background: url(../image/4.png) no-repeat;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left:60%;
+  bottom: -20%;
 }
 .bg_3{
   width: 30%;
@@ -141,6 +147,32 @@
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 5px #19f6e8, 0 0 35px #19f6e8, 0 0 40px #19f6e8, 0 0 50px #19f6e8, 0 0 75px #19f6e8;
  	 }
 }
+/*show*/
+#Layer_1{
+  /*border:1px solid red;*/
+   -webkit-animation: ddd 5s linear forwards;
+   -moz-animation:ddd 5s linear forwards;
+   animation: ddd 5s linear forwards;
+}
+#Layer_2{
+  /*border:1px solid red;*/
+   -webkit-animation: ddd 5s linear forwards;
+   -moz-animation:ddd 5s linear forwards;
+   animation: ddd 5s linear forwards;
+}
+@keyframes ddd {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    /*stroke-width: 8px;*/
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    /*stroke-width: 8px;*/
+  }
+}
+
 
 /*button*/
 @keyframes draw {

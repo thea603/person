@@ -1,8 +1,8 @@
 $(function(){
 	var win_width=$(window).width();
 	var win_height=$(window).height();
-	var win_half = win_width/2;
-	var win_left =win_half/2;
+	// var win_half = win_width/2;
+	// var win_left =win_half/2;
 	var about = $("#about").offset().top;
 	var about = $("#about").offset().top;
 
@@ -13,7 +13,7 @@ $(function(){
 	$('#con').css({'width':win_width,'height':win_height})
 	$('.show').css({'width':win_width,'height':win_height})
 	$('.ex').css({'width':win_width,'height':win_height})
-	$('.geometry').css({'width':win_width/2,'height':win_height,'marginLeft':win_left})
+	// $('.geometry').css({'width':win_width/2,'height':win_height,'marginLeft':win_left})
 
 	$('.top').click(function(){
 		$(document.body).animate({scrollTop:0}, 1000)
@@ -32,9 +32,13 @@ $(function(){
 	// $("#parallax .parallax-layers").parallax({}, {
  //        xparallax: "50%",
  //        yparallax: '30%',
- //        height: 100
  //    });
-    
+
+    $('.svg-wrapper .text').click(function(){
+    	 $('.show_page').addClass('show_page_animate');
+    	 $('.main').removeClass('mains')
+    })
+
     $('a').click(function(){
     	 $("html, body").animate({    
             scrollTop: $($(this).attr("href")).offset().top + "px"    

@@ -11,6 +11,9 @@ body{
 	background-attachment: fixed;
 	background-size: cover;
 }
+.mains{
+	display: none;
+}
 /*header*/
 .header{
 	width: 100%;
