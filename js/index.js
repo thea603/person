@@ -54,6 +54,47 @@ $(function(){
 	    }
 	}
 	$(window).on("scroll", revealOnScroll);
+
+
+
+	function disScroll() {
+	  var scrolled = $(window).scrollTop();
+	    var current = $("#dis"), // 当前元素
+	      w_height = $(window).height(), //视窗高度
+	      offsetTop = current.offset().top; //当前元素离顶部的高度
+	    if (scrolled + w_height - 50 > offsetTop) {
+	      current.addClass("dis_animate");
+	    } else {
+	      current.removeClass("dis_animate");
+	    }
+	}
+	$(window).on("scroll", disScroll);
+
+	function webScroll() {
+	  var scrolled = $(window).scrollTop();
+	    var current = $("#web"), // 当前元素
+	      w_height = $(window).height(), //视窗高度
+	      offsetTop = current.offset().top; //当前元素离顶部的高度
+	    if (scrolled + w_height - 50 > offsetTop) {
+	      current.addClass("web_animate");
+	    } else {
+	      current.removeClass("web_animate");
+	    }
+	}
+	$(window).on("scroll", webScroll);
+
+		function proScroll() {
+	  var scrolled = $(window).scrollTop();
+	    var current = $("#pro"), // 当前元素
+	      w_height = $(window).height(), //视窗高度
+	      offsetTop = current.offset().top; //当前元素离顶部的高度
+	    if (scrolled + w_height - 50 > offsetTop) {
+	      current.addClass("pro_animate");
+	    } else {
+	      current.removeClass("pro_animate");
+	    }
+	}
+	$(window).on("scroll", proScroll);
 })
 
 
