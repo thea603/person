@@ -1,8 +1,6 @@
 $(function(){
 	var win_width=$(window).width();
 	var win_height=$(window).height();
-	// var win_half = win_width/2;
-	// var win_left =win_half/2;
 	var about = $("#about").offset().top;
 	var about = $("#about").offset().top;
 
@@ -13,8 +11,6 @@ $(function(){
 	$('#con').css({'width':win_width,'height':win_height})
 	$('.show').css({'width':win_width,'height':win_height})
 	$('.ex').css({'width':win_width,'height':win_height})
-	// $('.geometry').css({'width':win_width/2,'height':win_height,'marginLeft':win_left})
-
 	$('.top').click(function(){
 		$(document.body).animate({scrollTop:0}, 1000)
 	})
@@ -28,11 +24,6 @@ $(function(){
 	    		alert(124);
 	    	}
 	    })
-
-	// $("#parallax .parallax-layers").parallax({}, {
- //        xparallax: "50%",
- //        yparallax: '30%',
- //    });
 
     $('.svg-wrapper .text').click(function(){
     	 $('.show_page').addClass('show_page_animate');
@@ -48,9 +39,9 @@ $(function(){
 
 	function revealOnScroll() {
 	  var scrolled = $(window).scrollTop();
-	    var current = $("#about .content"), // 当前元素
-	      w_height = $(window).height(), //视窗高度
-	      offsetTop = current.offset().top; //当前元素离顶部的高度
+	    var current = $("#about .content"), 
+	      w_height = $(window).height(), 
+	      offsetTop = current.offset().top; 
 	    if (scrolled + w_height - 50 > offsetTop) {
 	      current.addClass("content_animate");
 	    } else {
@@ -63,9 +54,9 @@ $(function(){
 
 	function disScroll() {
 	  var scrolled = $(window).scrollTop();
-	    var current = $("#dis"), // 当前元素
-	      w_height = $(window).height(), //视窗高度
-	      offsetTop = current.offset().top; //当前元素离顶部的高度
+	    var current = $("#dis"),
+	      w_height = $(window).height(), 
+	      offsetTop = current.offset().top;
 	    if (scrolled + w_height - 50 > offsetTop) {
 	      current.addClass("dis_animate");
 	    } else {
@@ -76,9 +67,9 @@ $(function(){
 
 	function webScroll() {
 	  var scrolled = $(window).scrollTop();
-	    var current = $("#web"), // 当前元素
-	      w_height = $(window).height(), //视窗高度
-	      offsetTop = current.offset().top; //当前元素离顶部的高度
+	    var current = $("#web"), 
+	      w_height = $(window).height(), 
+	      offsetTop = current.offset().top; 
 	    if (scrolled + w_height - 50 > offsetTop) {
 	      current.addClass("web_animate");
 	    } else {
@@ -89,9 +80,9 @@ $(function(){
 
 		function proScroll() {
 	  var scrolled = $(window).scrollTop();
-	    var current = $("#pro"), // 当前元素
-	      w_height = $(window).height(), //视窗高度
-	      offsetTop = current.offset().top; //当前元素离顶部的高度
+	    var current = $("#pro"), 
+	      w_height = $(window).height(), 
+	      offsetTop = current.offset().top; 
 	    if (scrolled + w_height - 50 > offsetTop) {
 	      current.addClass("pro_animate");
 	    } else {

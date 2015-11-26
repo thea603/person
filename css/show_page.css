@@ -16,7 +16,17 @@
 	right:0;
 }
 .show_page_animate{
-  animation: show 1s 1 linear forwards;
+  -webkit-animation: show 1s 1 linear forwards;
+          animation: show 1s 1 linear forwards;
+}
+
+@-webkit-keyframes show {
+  to{
+    top:50%;
+  bottom: 50%;
+  left:50%;
+  right:50%;
+  }
 }
 
 @keyframes show {
@@ -40,7 +50,8 @@
 	margin-top: 15%;
   z-index: 99;
   position: relative;
-	animation: title 6s 1 linear;
+	-webkit-animation: title 6s 1 linear;
+	        animation: title 6s 1 linear;
 }
 /*标题内容*/
 .show_page .title p{
@@ -53,7 +64,6 @@
 
 .show_page .title p:hover {
  	 -webkit-animation: neon3 1.5s ease-in-out infinite alternate;
- 	 -moz-animation: neon3 1.5s ease-in-out infinite alternate;
  	 animation: neon3 1.5s ease-in-out infinite alternate;
 }
 
@@ -69,7 +79,8 @@
   top:0;
   z-index: 99;
   width: 320px;
-  animation: ball 6s 1 linear;
+  -webkit-animation: ball 6s 1 linear;
+          animation: ball 6s 1 linear;
 }
 /*按钮边框*/
 .border{
@@ -132,7 +143,9 @@
   height: 20%;
   margin-top: 10%;
   background-size: cover;
-  transform:rotate(7deg);
+  -webkit-transform:rotate(7deg);
+      -ms-transform:rotate(7deg);
+          transform:rotate(7deg);
   background: url(../image/1-1.png) no-repeat;
 }
 .bg{
@@ -151,14 +164,24 @@
 #Layer_1{
   /*border:1px solid red;*/
    -webkit-animation: ddd 5s linear forwards;
-   -moz-animation:ddd 5s linear forwards;
    animation: ddd 5s linear forwards;
 }
 #Layer_2{
   /*border:1px solid red;*/
    -webkit-animation: ddd 5s linear forwards;
-   -moz-animation:ddd 5s linear forwards;
    animation: ddd 5s linear forwards;
+}
+@-webkit-keyframes ddd {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    /*stroke-width: 8px;*/
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    /*stroke-width: 8px;*/
+  }
 }
 @keyframes ddd {
   0% {
@@ -175,6 +198,18 @@
 
 
 /*button*/
+@-webkit-keyframes draw {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 8px;
+  }
+}
 @keyframes draw {
   0% {
     stroke-dasharray: 140 540;
@@ -185,6 +220,22 @@
     stroke-dasharray: 760;
     stroke-dashoffset: 0;
     stroke-width: 8px;
+  }
+}
+@-webkit-keyframes text {
+	from{
+	   transform: scale(.4);
+  	  -ms-transform: scale(.4);	/* IE 9 */
+ 	  -webkit-transform: scale(.4);	/* Safari 和 Chrome */
+ 	  -o-transform: scale(.4);	/* Opera */
+  	  -moz-transform: scale(.4);
+	}
+  to{
+	   transform: scale(1);
+  	  -ms-transform: scale(0);	/* IE 9 */
+ 	  -webkit-transform: scale(1);	/* Safari 和 Chrome */
+ 	  -o-transform: scale(1);	/* Opera */
+  	  -moz-transform: scale(1);
   }
 }
 @keyframes text {
@@ -201,6 +252,39 @@
  	  -webkit-transform: scale(1);	/* Safari 和 Chrome */
  	  -o-transform: scale(1);	/* Opera */
   	  -moz-transform: scale(1);
+  }
+}
+@-webkit-keyframes ball {
+  0% {
+  opacity: 0;
+  }
+  15% {
+    opacity: 1
+  }
+  25% {
+  opacity: 0
+  }
+  32.5% {
+  opacity: 1
+  }
+  40% {
+    opacity: 1
+  }
+ 
+  55% {
+    opacity: 1
+  }
+  60% {
+   opacity: 1
+  }
+  64% {
+   opacity: 1
+  }
+  66% {
+   opacity: 1
+  }
+  70%, 100% {
+    opacity: 1
   }
 }
 @keyframes ball {
@@ -237,6 +321,56 @@
   }
 }
 /*title a*/
+@-webkit-keyframes title {
+  0% {
+  opacity: 0
+  }
+  15% {
+    opacity: 0
+  }
+  25% {
+  opacity: 0
+  }
+  32.5% {
+  opacity: 0
+  }
+  40% {
+    opacity: 0
+  }
+  45% {
+     opacity: 0
+
+  }
+  50% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #19f6e8, 0 0 35px #19f6e8, 0 0 40px #19f6e8, 0 0 50px #19f6e8, 0 0 75px #19f6e8;
+    opacity: 1;
+    color: #222222;
+  }
+  56% {
+     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #19f6e8, 0 0 35px #19f6e8, 0 0 40px #19f6e8, 0 0 50px #19f6e8, 0 0 75px #19f6e8;
+     opacity: 1;
+     color: #222222;
+
+  }
+  60% {
+   opacity: 0
+  }
+  64% {
+     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #19f6e8, 0 0 35px #19f6e8, 0 0 40px #19f6e8, 0 0 50px #19f6e8, 0 0 75px #19f6e8;
+     opacity: 1;
+     color: #222222;
+
+  }
+  66% {
+     opacity: 1;
+     color: #FFFFFF;
+
+  }
+  70%, 100% {
+     opacity: 1;
+     color: #FFFFFF;
+  }
+}
 @keyframes title {
   0% {
   opacity: 0

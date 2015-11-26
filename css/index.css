@@ -27,6 +27,11 @@ body{
 	-webkit-animation:header .5s  linear forwards;
     animation:header .5s linear forwards;
 }
+@-webkit-keyframes header {
+	to{
+		background-color: black;
+	}
+}
 @keyframes header {
 	to{
 		background-color: black;
@@ -71,7 +76,7 @@ body{
 	color: #9FA1A2;
 	border:3px solid #9FA1A2;
 	border-left: none;
-	border-right:none;s
+	border-right:none;
 	height: 100px;
 	margin: 0 auto;
 	line-height: 100px;
@@ -93,8 +98,10 @@ body{
 	margin: 70px auto 0px auto;
 	background-color: black;
 	opacity: 0.3;
+	-webkit-transition-property:opacity;
 	transition-property:opacity;
-	transition-duration:1s;
+	-webkit-transition-duration:1s;
+	        transition-duration:1s;
 }
 .banner .title a i{
 	margin-left: 33% !important;
@@ -121,6 +128,12 @@ body{
 	-webkit-animation:about 3s  linear forwards;
     animation:about 3s linear forwards;
 
+}
+@-webkit-keyframes about {
+	to{
+		margin-left: 20%;
+		opacity: 1;
+	}
 }
 @keyframes about {
 	to{
@@ -198,6 +211,12 @@ body{
 	-webkit-animation:card1 1s 2s linear forwards;
     animation:card1 1s 2s linear forwards;
 }
+@-webkit-keyframes card1 {
+	to{
+		margin-top:0px;
+		opacity: 1;
+	}
+}
 @keyframes card1 {
 	to{
 		margin-top:0px;
@@ -267,7 +286,8 @@ body{
 	border:4px solid #242830;
 	float: left;
 	box-sizing:border-box;
-	perspective: 1000;
+	-webkit-perspective: 1000;
+	        perspective: 1000;
 }
 .tech_details .tech_card:nth-child(1) .turn .before{
 	background: url(../image/html5.png) no-repeat  center;
@@ -306,16 +326,20 @@ body{
 .turn{
 	width: 100%;
 	height: 100%;
+	-webkit-transition:0.6s;
 	transition: 0.6s;
-	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
 	position: relative;
 }
 .tech_card:hover .turn, .tech_card:hover .turn {
-		transform: rotateY(180deg);
+		-webkit-transform: rotateY(180deg);
+		        transform: rotateY(180deg);
 	}
 .before{
 	position: absolute;
-	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -329,7 +353,8 @@ body{
 }
 .after{
 	position: absolute;
-	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
 	top: 0;
 	left: 0;
 	background-color:#FFFFFF;
@@ -360,10 +385,7 @@ body{
   border-color: #bfbfbf #b3b3b3 #9e9e9e;
   border-radius: 10px;
   background-image: -webkit-linear-gradient(top, #f0f0f0 0%, #dbdbdb 70%, #cccccc 100%);
-  background-image: -moz-linear-gradient(top, #f0f0f0 0%, #dbdbdb 70%, #cccccc 100%);
-  background-image: -o-linear-gradient(top, #f0f0f0 0%, #dbdbdb 70%, #cccccc 100%);
   background-image: linear-gradient(to bottom, #f0f0f0 0%, #dbdbdb 70%, #cccccc 100%);
-  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 .progress > span > span {
@@ -390,15 +412,14 @@ body{
   background: #85c440;
   border-color: #78b337 #6ba031 #568128;
   background-image: -webkit-linear-gradient(top, #b7dc8e 0%, #99ce5f 70%, #85c440 100%);
-  background-image: -moz-linear-gradient(top, #b7dc8e 0%, #99ce5f 70%, #85c440 100%);
-  background-image: -o-linear-gradient(top, #b7dc8e 0%, #99ce5f 70%, #85c440 100%);
   background-image: linear-gradient(to bottom, #b7dc8e 0%, #99ce5f 70%, #85c440 100%);
 }
 .before{
  	z-index:2;
 }
 .after{
-	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	        transform: rotateY(180deg);
 }
 
 /*EX*/
@@ -445,9 +466,13 @@ body{
 	-ms-transform: scale(1);	/* IE 9 */
 	-webkit-transform: scale(1);	/* Safari 和 Chrome */
 	-o-transform: scale(1);	/* Opera */
-	-moz-transform: scale(1)
-	transition-property:;transform;
-	transition-duration:1s;
+	-moz-transform: scale(1);
+	transition-property:-webkit-transform;
+	-webkit-transition-property:-webkit-transform;
+	transition-property:transform;
+	transition-property:transform, -webkit-transform;
+	-webkit-transition-duration:1s;
+	        transition-duration:1s;
 }
 .ex .details .card .img img:hover{
 		transform: scale(1.5);
@@ -491,8 +516,10 @@ body{
 	font-weight: bold;
 	display: block;
 	text-align: center;
+	-webkit-transition-property:bordr,color;
 	transition-property:bordr,color;
-	transition-duration:.5s;
+	-webkit-transition-duration:.5s;
+	        transition-duration:.5s;
 
 }
 #label2 .content:hover{
@@ -567,8 +594,10 @@ body{
 	top:90px;
 	opacity: .5;
 	border-radius: 50%;
+	-webkit-transition-property:opacity;
 	transition-property:opacity;
-	transition-duration:1s;
+	-webkit-transition-duration:1s;
+	        transition-duration:1s;
 }
 .footer_label .top i{
 	margin-left: 34% !important;
@@ -608,8 +637,10 @@ body{
 	float: left;
 	box-sizing:border-box;
 	border-bottom: 3px solid #FFFFFF;
+	-webkit-transition-property:margin-top,border-bottom;
 	transition-property:margin-top,border-bottom;
-	transition-duration:1s;
+	-webkit-transition-duration:1s;
+	        transition-duration:1s;
 }
 #con .content .card:hover{
 	margin-top: 3%;
@@ -693,3 +724,11 @@ body{
 .footer .right div:hover{
 	color:#3DC9B3;
 }
+ @media (max-width: 414px){
+	.show_page{
+		display: none;
+	}
+	.mains{
+		display: block;
+	}
+ }
